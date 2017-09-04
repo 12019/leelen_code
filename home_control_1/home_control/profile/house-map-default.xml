@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<house info="福建省厦门市孙坂南路65号(厦门立林科技)">
+    <layer w="0" name="1层" h="0" uid="1" image="" mark="1" y="0" id="1" x="0">
+        <room w="0" name="客厅" h="0" uid="2" image="roomImg2.jpg" y="0" id="2" x="0">
+            <device show_in_room="0" y_room="0" x_room="0" name="不可调光灯" uid="3" mode="refri" temperature="15" power="off" wind="auto" swing="off" value="0" type="light" open="off" show_in_floor="0" x_floor="0" id="257" subtype="non-var">
+                <point y="249" x="402"/>
+                <point y="280" x="401"/>
+                <point y="282" x="414"/>
+                <point y="285" x="428"/>
+                <point y="285" x="448"/>
+                <point y="282" x="467"/>
+                <point y="280" x="469"/>
+                <point y="252" x="468"/>
+                <point y="246" x="446"/>
+                <point y="247" x="428"/>
+            </device>
+            <device show_in_room="0" y_room="0" x_room="0" name="可调灯" uid="4" mode="refri" temperature="15" power="off" wind="auto" swing="off" value="0" type="light" open="off" show_in_floor="0" x_floor="0" id="2305" subtype="var">
+                <point y="431" x="169"/>
+                <point y="417" x="166"/>
+                <point y="405" x="172"/>
+                <point y="402" x="189"/>
+                <point y="408" x="198"/>
+                <point y="415" x="202"/>
+                <point y="425" x="202"/>
+                <point y="430" x="196"/>
+                <point y="430" x="192"/>
+                <point y="432" x="191"/>
+                <point y="432" x="194"/>
+            </device>
+            <device show_in_room="0" y_room="0" x_room="0" name="窗帘" uid="5" mode="refri" temperature="15" power="off" wind="auto" swing="off" value="0" type="curtain" open="off" show_in_floor="0" x_floor="0" id="258" subtype="non-var">
+                <point y="222" x="235"/>
+                <point y="495" x="237"/>
+                <point y="498" x="238"/>
+                <point y="499" x="290"/>
+                <point y="492" x="372"/>
+                <point y="232" x="369"/>
+                <point y="232" x="368"/>
+            </device>
+            <device show_in_room="0" y_room="0" x_room="0" name="电视" uid="6" mode="refri" temperature="15" power="off" wind="auto" swing="off" value="0" type="tv" open="off" show_in_floor="0" x_floor="0" id="3329" subtype="non-var">
+                <point y="377" x="617"/>
+                <point y="401" x="614"/>
+                <point y="419" x="615"/>
+                <point y="449" x="613"/>
+                <point y="456" x="615"/>
+                <point y="461" x="634"/>
+                <point y="466" x="664"/>
+                <point y="468" x="680"/>
+                <point y="468" x="687"/>
+                <point y="436" x="688"/>
+                <point y="413" x="688"/>
+                <point y="381" x="688"/>
+                <point y="376" x="686"/>
+            </device>
+            <device show_in_room="0" y_room="0" x_room="0" name="空调" uid="7" mode="refri" temperature="15" power="off" wind="auto" swing="off" value="0" type="ac" open="off" show_in_floor="0" x_floor="0" id="3329" subtype="non-var">
+                <point y="318" x="503"/>
+                <point y="498" x="505"/>
+                <point y="501" x="544"/>
+                <point y="484" x="565"/>
+                <point y="317" x="559"/>
+                <point y="313" x="539"/>
+            </device>
+            <device show_in_room="0" y_room="0" x_room="0" name="背景音乐" uid="8" mode="refri" temperature="15" power="off" wind="auto" swing="off" value="0" type="music" open="off" show_in_floor="0" x_floor="0" id="5632" subtype="non-var">
+                <point y="404" x="730"/>
+                <point y="574" x="731"/>
+                <point y="582" x="726"/>
+                <point y="579" x="764"/>
+                <point y="403" x="759"/>
+            </device>
+        </room>
+    </layer>
+</house>

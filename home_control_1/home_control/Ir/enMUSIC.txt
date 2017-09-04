@@ -1,0 +1,1 @@
+poweroff poweron mute umute mp3 cd aux radio pre next play stop vol_up vol_down 

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SysSetMainDialog</class>
+ <widget class="QDialog" name="SysSetMainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>18</y>
+     <width>538</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainReturn">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>417</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainSecurity">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>358</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>安防</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainRing">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>242</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>铃声</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainDevice">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>300</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>设备</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainLag">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>66</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>语言</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainTime">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>183</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>时间</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainVersion">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>8</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>版本</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetMainPwd">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>124</y>
+     <width>173</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>密码</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonSysSetMainVersion</tabstop>
+  <tabstop>pushButtonSysSetMainLag</tabstop>
+  <tabstop>pushButtonSysSetMainPwd</tabstop>
+  <tabstop>pushButtonSysSetMainTime</tabstop>
+  <tabstop>pushButtonSysSetMainRing</tabstop>
+  <tabstop>pushButtonSysSetMainDevice</tabstop>
+  <tabstop>pushButtonSysSetMainSecurity</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

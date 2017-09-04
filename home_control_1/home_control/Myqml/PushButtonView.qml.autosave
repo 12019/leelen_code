@@ -1,0 +1,316 @@
+import QtQuick 1.0
+
+Rectangle {
+    id:buttonview
+    width: 800
+    height: 480
+    opacity: 1
+    property string pwd:""
+    property string star: ""
+    
+    Timer{
+        id:timer1
+        interval: 800
+        running: false
+        repeat: false
+        onTriggered: {
+            ispress=true
+        }
+    }
+    BorderImage {
+        anchors.fill: parent
+        source: "file:///mnt/disk/images/home_control/irpasswd/bg.png"
+    }
+    Button {
+        id:one
+        //name:"1"
+        image: "file:///mnt/disk/images/home_control/irpasswd/1-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/1-2.png"
+        color: "#00000000"
+        anchors.left: parent.left
+        anchors.leftMargin: 230
+        anchors.top: parent.top
+        anchors.topMargin: 110
+        width: 77
+        height: 76
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="1" 
+        }
+        opacity: 1
+    }
+
+    Button {
+        id: two
+        color: "#00000000"
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.topMargin: 110
+        //name:"2"
+        image: "file:///mnt/disk/images/home_control/irpasswd/2-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/2-2.png"
+        x: 350
+        width: 77
+        height: 76
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="2"
+        }
+    }
+
+    Button {
+        id: three
+        //name:"3"
+        color: "#00000000"
+        anchors.right: parent.right
+        anchors.rightMargin: 230
+        anchors.top: parent.top
+        anchors.topMargin: 110
+        image: "file:///mnt/disk/images/home_control/irpasswd/3-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/3-2.png"
+        x: 470
+        width: 77
+        height: 76
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="3"
+        }
+    }
+
+    Button {
+        id: four
+        color: "#00000000"
+        anchors.left: parent.left
+        anchors.leftMargin: 230
+        anchors.top: one.bottom
+        anchors.topMargin: 15
+        image: "file:///mnt/disk/images/home_control/irpasswd/4-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/4-2.png"
+        width: 77
+        height: 76
+        //name:"4"
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="4"
+        }
+    }
+
+    Button {
+        id: five
+        x: 350
+        color: "#00000000"
+        anchors.top: two.bottom
+        anchors.topMargin: 15
+        anchors.horizontalCenter: parent.horizontalCenter
+        image: "file:///mnt/disk/images/home_control/irpasswd/5-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/5-2.png"
+        width: 77
+        height: 76
+        //name:"5"
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="5"
+        }
+    }
+
+    Button {
+        id: six
+        x: 470
+        color: "#00000000"
+        anchors.top: three.bottom
+        anchors.topMargin: 15
+        anchors.right: parent.right
+        anchors.rightMargin: 230
+        width: 77
+        height: 76
+        //name:"6"
+        image: "file:///mnt/disk/images/home_control/irpasswd/6-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/6-2.png"
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="6"
+        }
+    }
+
+    Button {
+        id: seven
+        width: 77
+        height: 76
+        color: "#00000000"
+        anchors.top: four.bottom
+        anchors.topMargin: 15
+        anchors.left: parent.left
+        anchors.leftMargin: 230
+        image: "file:///mnt/disk/images/home_control/irpasswd/7-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/7-2.png"
+        //name:"7"
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="7"
+        }
+    }
+
+    Button {
+        id: eight
+        x: 350
+        color: "#00000000"
+        anchors.top: five.bottom
+        anchors.topMargin: 15
+        anchors.horizontalCenter: parent.horizontalCenter
+        image: "file:///mnt/disk/images/home_control/irpasswd/8-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/8-2.png"
+        width: 77
+        height: 76
+        fontsize: 50
+        //name:"8"
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="8"
+        }
+    }
+
+    Button {
+        id: nine
+        x: 470
+        width: 77
+        height: 76
+        color: "#00000000"
+        anchors.top: six.bottom
+        anchors.topMargin: 15
+        anchors.right: parent.right
+        anchors.rightMargin: 230
+        //name:"9"
+        image: "file:///mnt/disk/images/home_control/irpasswd/9-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/9-2.png"
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="9"
+        }
+    }
+
+    Button {
+        id: del
+        width: 77
+        height: 76
+        color: "#00000000"
+        anchors.top: seven.bottom
+        anchors.topMargin: 15
+        anchors.left: parent.left
+        anchors.leftMargin: 230
+        image: "file:///mnt/disk/images/home_control/irpasswd/10-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/10-2.png"
+        //name:"*"
+        fontsize: 50
+        onClicked: {
+            star = star.substring(0,star.length-1)
+            irpwd.text = star
+            pwd = pwd.substring(0,pwd.length-1)
+        }
+    }
+
+    Button {
+        id: zero
+        x: 350
+        color: "#00000000"
+        anchors.top: eight.bottom
+        anchors.topMargin: 15
+        anchors.horizontalCenter: parent.horizontalCenter
+        image: "file:///mnt/disk/images/home_control/irpasswd/0-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/0-2.png"
+        width: 77
+        height: 76
+        //name:"0"
+        fontsize: 50
+        onClicked: {
+            star+="●"
+            irpwd.text = star
+            pwd+="0"
+        }
+    }
+
+    Button {
+        id: sure
+        x: 470
+        image: "file:///mnt/disk/images/home_control/irpasswd/11-1.png"
+        imagepressed: "file:///mnt/disk/images/home_control/irpasswd/11-2.png"
+        width: 77
+        height: 76
+        //name:"#"
+        color: "#00000000"
+        anchors.top: nine.bottom
+        anchors.topMargin: 15
+        anchors.right: parent.right
+        anchors.rightMargin: 230
+        fontsize: 50
+        onClicked: {
+            if(pwd == "999999"){
+                
+            }
+            else{
+                irpwd = "密码错误"
+            }
+        }
+    }
+
+    Rectangle{
+        id:pawd
+        x:230
+        width: 340
+        height: 62
+        radius: 14
+        anchors.top: parent.top
+        anchors.topMargin: 20
+        anchors.horizontalCenter: parent.horizontalCenter
+        opacity: 0.4
+
+        TextEdit{
+            id: irpwd
+            /*width: pawd.width-del.width
+            height: pawd.height*/
+            anchors.fill:parent
+            text: "密码编辑框"
+            horizontalAlignment: TextEdit.AlignHCenter
+            verticalAlignment: TextEdit.AlignVCenter
+            font.pixelSize: 30
+            textChanged: {
+                if(irpwd.text == ""){
+                    irpwd.text = "密码编辑框"
+                }
+            }
+        }
+    }
+
+    states: [
+        State {
+            name: "State1"
+
+        }
+    ]
+    transitions:[
+        Transition{
+            NumberAnimation{
+                properties: "x,y,opacity,width,height";
+                duration: 1000;
+                easing.type: Easing.InOutQuad
+            }
+        }
+    ]
+
+}

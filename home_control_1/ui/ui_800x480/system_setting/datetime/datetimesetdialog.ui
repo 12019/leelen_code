@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DatetimeSetDialog</class>
+ <widget class="QDialog" name="DatetimeSetDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="FMyLineEdit" name="lineEditDay">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>165</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>30</string>
+   </property>
+   <property name="maxLength">
+    <number>2</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="FMyLineEdit" name="lineEditSecond">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>82</y>
+     <width>165</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>13</string>
+   </property>
+   <property name="maxLength">
+    <number>2</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="FMyLineEdit" name="lineEditYear">
+   <property name="geometry">
+    <rect>
+     <x>36</x>
+     <y>30</y>
+     <width>165</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>2012</string>
+   </property>
+   <property name="maxLength">
+    <number>4</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="FMyLineEdit" name="lineEditMonth">
+   <property name="geometry">
+    <rect>
+     <x>278</x>
+     <y>30</y>
+     <width>165</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+   <property name="maxLength">
+    <number>2</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="FMyLineEdit" name="lineEditMinute">
+   <property name="geometry">
+    <rect>
+     <x>278</x>
+     <y>82</y>
+     <width>165</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>32</string>
+   </property>
+   <property name="maxLength">
+    <number>2</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="FMyLineEdit" name="lineEditHour">
+   <property name="geometry">
+    <rect>
+     <x>36</x>
+     <y>82</y>
+     <width>165</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+   <property name="maxLength">
+    <number>2</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameDateTimeSetting">
+   <property name="geometry">
+    <rect>
+     <x>36</x>
+     <y>27</y>
+     <width>728</width>
+     <height>104</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <zorder>testlabel</zorder>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum9">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>300</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum6">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>219</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum2">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>138</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum1">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>138</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetSave">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>307</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum4">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>219</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum8">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>300</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum7">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>300</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum0">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>381</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum3">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>138</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetNum5">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>219</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetBack">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>140</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退格</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetTime">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>224</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>校时</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetReturn">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>391</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetDot">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>381</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetShop">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>381</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>#</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonDateTimeSetClear">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>140</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDateTImeSetYear">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>30</y>
+     <width>77</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>年</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDateTImeSetMonth">
+   <property name="geometry">
+    <rect>
+     <x>443</x>
+     <y>30</y>
+     <width>77</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>月</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDateTImeSetDay">
+   <property name="geometry">
+    <rect>
+     <x>685</x>
+     <y>30</y>
+     <width>77</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>日</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDateTImeSetHour">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>82</y>
+     <width>77</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>时</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDateTImeSetMinute">
+   <property name="geometry">
+    <rect>
+     <x>443</x>
+     <y>82</y>
+     <width>77</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>分</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDateTImeSetSecond">
+   <property name="geometry">
+    <rect>
+     <x>685</x>
+     <y>82</y>
+     <width>77</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>秒</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>frameDateTimeSetting</zorder>
+  <zorder>lineEditDay</zorder>
+  <zorder>lineEditSecond</zorder>
+  <zorder>lineEditYear</zorder>
+  <zorder>lineEditMonth</zorder>
+  <zorder>lineEditMinute</zorder>
+  <zorder>lineEditHour</zorder>
+  <zorder>pushButtonDateTimeSetNum9</zorder>
+  <zorder>pushButtonDateTimeSetNum6</zorder>
+  <zorder>pushButtonDateTimeSetNum2</zorder>
+  <zorder>pushButtonDateTimeSetNum1</zorder>
+  <zorder>pushButtonDateTimeSetSave</zorder>
+  <zorder>pushButtonDateTimeSetNum4</zorder>
+  <zorder>pushButtonDateTimeSetNum8</zorder>
+  <zorder>pushButtonDateTimeSetNum7</zorder>
+  <zorder>pushButtonDateTimeSetNum0</zorder>
+  <zorder>pushButtonDateTimeSetNum3</zorder>
+  <zorder>pushButtonDateTimeSetNum5</zorder>
+  <zorder>pushButtonDateTimeSetBack</zorder>
+  <zorder>pushButtonDateTimeSetTime</zorder>
+  <zorder>pushButtonDateTimeSetReturn</zorder>
+  <zorder>pushButtonDateTimeSetDot</zorder>
+  <zorder>pushButtonDateTimeSetShop</zorder>
+  <zorder>pushButtonDateTimeSetClear</zorder>
+  <zorder>labelDateTImeSetYear</zorder>
+  <zorder>labelDateTImeSetMonth</zorder>
+  <zorder>labelDateTImeSetDay</zorder>
+  <zorder>labelDateTImeSetHour</zorder>
+  <zorder>labelDateTImeSetMinute</zorder>
+  <zorder>labelDateTImeSetSecond</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>FMyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>fmylineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>lineEditYear</tabstop>
+  <tabstop>lineEditMonth</tabstop>
+  <tabstop>lineEditDay</tabstop>
+  <tabstop>lineEditHour</tabstop>
+  <tabstop>lineEditMinute</tabstop>
+  <tabstop>lineEditSecond</tabstop>
+  <tabstop>pushButtonDateTimeSetNum1</tabstop>
+  <tabstop>pushButtonDateTimeSetNum2</tabstop>
+  <tabstop>pushButtonDateTimeSetNum3</tabstop>
+  <tabstop>pushButtonDateTimeSetNum4</tabstop>
+  <tabstop>pushButtonDateTimeSetNum5</tabstop>
+  <tabstop>pushButtonDateTimeSetBack</tabstop>
+  <tabstop>pushButtonDateTimeSetNum6</tabstop>
+  <tabstop>pushButtonDateTimeSetNum7</tabstop>
+  <tabstop>pushButtonDateTimeSetNum8</tabstop>
+  <tabstop>pushButtonDateTimeSetNum9</tabstop>
+  <tabstop>pushButtonDateTimeSetNum0</tabstop>
+  <tabstop>pushButtonDateTimeSetTime</tabstop>
+  <tabstop>pushButtonDateTimeSetSave</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

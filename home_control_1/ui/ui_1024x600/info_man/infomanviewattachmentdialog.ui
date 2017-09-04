@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InfoManViewAttachmentDialog</class>
+ <widget class="QDialog" name="InfoManViewAttachmentDialog">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>查看附件</string>
+  </property>
+  <widget class="QLabel" name="label_info_title">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>150</y>
+     <width>561</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>图片显示框</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonInfoManViewZoomIn">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>184</y>
+     <width>230</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonInfoManViewZoomOut">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>265</y>
+     <width>230</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonInfoManViewPrev">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>346</y>
+     <width>230</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>上一张</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonInfoManViewNext">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>427</y>
+     <width>230</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>下一张</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonInfoManViewReturn">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>508</y>
+     <width>230</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsViewAttachment">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>190</y>
+     <width>611</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAttachmentFileName">
+   <property name="geometry">
+    <rect>
+     <x>57</x>
+     <y>97</y>
+     <width>331</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="text">
+    <string>文件名：filename.jpg</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAttachmentIndex">
+   <property name="geometry">
+    <rect>
+     <x>388</x>
+     <y>97</y>
+     <width>331</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="text">
+    <string>第11张 共30张 </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>38</x>
+     <y>17</y>
+     <width>700</width>
+     <height>570</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>25</y>
+     <width>511</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>,white</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26px, white;
+border: 0px;</string>
+   </property>
+   <property name="text">
+    <string>信息附件查看器</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameBox">
+   <property name="geometry">
+    <rect>
+     <x>57</x>
+     <y>97</y>
+     <width>662</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+border: 2px solid #C0C0C0;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>framePanel</zorder>
+  <zorder>frameBox</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_info_title</zorder>
+  <zorder>pushButtonInfoManViewZoomIn</zorder>
+  <zorder>pushButtonInfoManViewZoomOut</zorder>
+  <zorder>pushButtonInfoManViewPrev</zorder>
+  <zorder>pushButtonInfoManViewNext</zorder>
+  <zorder>pushButtonInfoManViewReturn</zorder>
+  <zorder>graphicsViewAttachment</zorder>
+  <zorder>labelAttachmentFileName</zorder>
+  <zorder>labelAttachmentIndex</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonInfoManViewZoomIn</tabstop>
+  <tabstop>pushButtonInfoManViewZoomOut</tabstop>
+  <tabstop>pushButtonInfoManViewPrev</tabstop>
+  <tabstop>pushButtonInfoManViewNext</tabstop>
+  <tabstop>pushButtonInfoManViewReturn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

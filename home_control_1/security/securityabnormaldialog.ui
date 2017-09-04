@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecurityAbnormalDialog</class>
+ <widget class="QDialog" name="SecurityAbnormalDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableView" name="tableViewAbnormalList">
+   <property name="geometry">
+    <rect>
+     <x>44</x>
+     <y>77</y>
+     <width>518</width>
+     <height>377</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::NoPen</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecAbnormalNext">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>336</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>下一页</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecAbnormalPrev">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>272</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>上一页</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>18</y>
+     <width>538</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>20</y>
+     <width>510</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>,white</family>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>02月22日设置为外出设防状态</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecAbnormalReturn">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>400</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecAbnormalDisArm">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>208</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>撤防</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecAbnormalHome">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>144</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>居家</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecAbnormalOut">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>80</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>外出</string>
+   </property>
+  </widget>
+  <zorder>framePanel</zorder>
+  <zorder>tableViewAbnormalList</zorder>
+  <zorder>pushButtonSecAbnormalNext</zorder>
+  <zorder>pushButtonSecAbnormalPrev</zorder>
+  <zorder>label_title</zorder>
+  <zorder>pushButtonSecAbnormalReturn</zorder>
+  <zorder>pushButtonSecAbnormalDisArm</zorder>
+  <zorder>pushButtonSecAbnormalHome</zorder>
+  <zorder>pushButtonSecAbnormalOut</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonSecAbnormalOut</tabstop>
+  <tabstop>pushButtonSecAbnormalHome</tabstop>
+  <tabstop>pushButtonSecAbnormalDisArm</tabstop>
+  <tabstop>pushButtonSecAbnormalPrev</tabstop>
+  <tabstop>pushButtonSecAbnormalNext</tabstop>
+  <tabstop>pushButtonSecAbnormalReturn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecurityMainDialog</class>
+ <widget class="QDialog" name="SecurityMainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableView" name="tableViewSecurityList">
+   <property name="geometry">
+    <rect>
+     <x>58</x>
+     <y>97</y>
+     <width>660</width>
+     <height>468</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::NoPen</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainReturn">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>508</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainNext">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>103</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>下一页</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainDel">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>346</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainPrev">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>22</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>上一页</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainDetail">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>265</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>详细</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainDelAll">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>427</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>全删</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>38</x>
+     <y>17</y>
+     <width>700</width>
+     <height>570</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>30</y>
+     <width>511</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>,white</family>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>报警管理</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSecMainSetArm">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>184</y>
+     <width>220</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>设防</string>
+   </property>
+  </widget>
+  <zorder>framePanel</zorder>
+  <zorder>tableViewSecurityList</zorder>
+  <zorder>pushButtonSecMainReturn</zorder>
+  <zorder>pushButtonSecMainNext</zorder>
+  <zorder>pushButtonSecMainDel</zorder>
+  <zorder>pushButtonSecMainPrev</zorder>
+  <zorder>pushButtonSecMainDetail</zorder>
+  <zorder>pushButtonSecMainDelAll</zorder>
+  <zorder>label_title</zorder>
+  <zorder>pushButtonSecMainSetArm</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonSecMainPrev</tabstop>
+  <tabstop>pushButtonSecMainNext</tabstop>
+  <tabstop>pushButtonSecMainSetArm</tabstop>
+  <tabstop>pushButtonSecMainDetail</tabstop>
+  <tabstop>pushButtonSecMainDel</tabstop>
+  <tabstop>pushButtonSecMainDelAll</tabstop>
+  <tabstop>pushButtonSecMainReturn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

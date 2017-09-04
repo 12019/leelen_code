@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Myqml/images/scrollbar.png</file>
+    </qresource>
+</RCC>

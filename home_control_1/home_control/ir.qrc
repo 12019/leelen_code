@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Ir/TV.txt</file>
+        <file>Ir/MUSIC.txt</file>
+        <file>Ir/enTV.txt</file>
+        <file>Ir/enMUSIC.txt</file>
+        <file>Ir/enAIR.txt</file>
+        <file>Ir/AIR.txt</file>
+        <file>Ir/zh_TWTV.txt</file>
+        <file>Ir/zh_TWMUSIC.txt</file>
+        <file>Ir/zh_TWAIR.txt</file>
+        <file>Ir/zh_CNTV.txt</file>
+        <file>Ir/zh_CNMUSIC.txt</file>
+        <file>Ir/zh_CNAIR.txt</file>
+    </qresource>
+</RCC>

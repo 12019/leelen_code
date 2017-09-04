@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RingAndVolumeDialog</class>
+ <widget class="QDialog" name="RingAndVolumeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeSave">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>530</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeReturn">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>660</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>30</y>
+     <width>858</width>
+     <height>745</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameRingAmdVolumeSetting">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>30</y>
+     <width>858</width>
+     <height>745</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_1">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>120</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>铃声音量</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_2">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>213</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>通话音量</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_3">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>306</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>拨打电话 </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_4">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>399</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>拨入电话 </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_5">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>492</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>门口主机</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_6">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>585</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>管理中心机1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ringvalue_7">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>678</y>
+     <width>330</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>管理中心机2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderRingVolume">
+   <property name="geometry">
+    <rect>
+     <x>436</x>
+     <y>120</y>
+     <width>431</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderVolume">
+   <property name="geometry">
+    <rect>
+     <x>436</x>
+     <y>213</y>
+     <width>431</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeDail">
+   <property name="geometry">
+    <rect>
+     <x>389</x>
+     <y>306</y>
+     <width>528</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26px;</string>
+   </property>
+   <property name="text">
+    <string>定制铃声</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeCallIn">
+   <property name="geometry">
+    <rect>
+     <x>389</x>
+     <y>399</y>
+     <width>528</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26px;</string>
+   </property>
+   <property name="text">
+    <string>定制铃声</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeDoor">
+   <property name="geometry">
+    <rect>
+     <x>389</x>
+     <y>492</y>
+     <width>528</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26px;</string>
+   </property>
+   <property name="text">
+    <string>定制铃声</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeCenter1">
+   <property name="geometry">
+    <rect>
+     <x>389</x>
+     <y>585</y>
+     <width>528</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26px;</string>
+   </property>
+   <property name="text">
+    <string>定制铃声</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonRingVolumeCenter2">
+   <property name="geometry">
+    <rect>
+     <x>389</x>
+     <y>678</y>
+     <width>528</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26px;</string>
+   </property>
+   <property name="text">
+    <string>定制铃声</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>219</x>
+     <y>40</y>
+     <width>510</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>铃声</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonRingVolumeSave</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

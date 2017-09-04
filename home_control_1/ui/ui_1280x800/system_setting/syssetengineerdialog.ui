@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SysSetEngineerDialog</class>
+ <widget class="QDialog" name="SysSetEngineerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerPwd">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>420</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>密 码</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerNetAddress">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>180</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>网 络</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerDoorMachine">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>300</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>门口机</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerReturn">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>660</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>30</y>
+     <width>858</width>
+     <height>745</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerRemoteCheck">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>540</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>远程设置</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerSave">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>540</y>
+     <width>246</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <zorder>framePanel</zorder>
+  <zorder>pushButtonSysSetEngineerPwd</zorder>
+  <zorder>pushButtonSysSetEngineerNetAddress</zorder>
+  <zorder>pushButtonSysSetEngineerDoorMachine</zorder>
+  <zorder>pushButtonSysSetEngineerReturn</zorder>
+  <zorder>pushButtonSysSetEngineerRemoteCheck</zorder>
+  <zorder>pushButtonSysSetEngineerSave</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonSysSetEngineerReturn</tabstop>
+  <tabstop>pushButtonSysSetEngineerNetAddress</tabstop>
+  <tabstop>pushButtonSysSetEngineerDoorMachine</tabstop>
+  <tabstop>pushButtonSysSetEngineerPwd</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

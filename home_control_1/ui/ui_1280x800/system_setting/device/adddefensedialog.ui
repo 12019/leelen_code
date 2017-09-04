@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddDefenseDialog</class>
+ <widget class="QDialog" name="AddDefenseDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="CommonPushButton" name="pushButtonAddDefSave">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>596</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefDel">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>501</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefNext">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>406</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>下一个</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefPrev">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>311</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>上一个</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefCalibrate">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>26</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>触屏校准</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefReset">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>121</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>系统重置</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefReboot">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>216</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>系统重启</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefReturn">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>691</y>
+     <width>270</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>30</y>
+     <width>858</width>
+     <height>745</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameDefenseSetting">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>30</y>
+     <width>858</width>
+     <height>745</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_4">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>399</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>安装位置</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_5">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>492</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>延迟报警</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>219</x>
+     <y>40</y>
+     <width>510</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>设备</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_1">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>120</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>防区号码</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_2">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>213</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>联动视频</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_3">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>306</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>报警类型</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDefenseNumber">
+   <property name="geometry">
+    <rect>
+     <x>273</x>
+     <y>120</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;
+font: 26px</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_6">
+   <property name="geometry">
+    <rect>
+     <x>487</x>
+     <y>120</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>防区类型</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefType">
+   <property name="geometry">
+    <rect>
+     <x>701</x>
+     <y>120</y>
+     <width>216</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>有线防区</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefChannel">
+   <property name="geometry">
+    <rect>
+     <x>273</x>
+     <y>213</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_7">
+   <property name="geometry">
+    <rect>
+     <x>487</x>
+     <y>213</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>设防类型</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefProperty">
+   <property name="geometry">
+    <rect>
+     <x>701</x>
+     <y>213</y>
+     <width>216</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>常设</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefSubType">
+   <property name="geometry">
+    <rect>
+     <x>273</x>
+     <y>306</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>紧急求助</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_adddefense_8">
+   <property name="geometry">
+    <rect>
+     <x>487</x>
+     <y>306</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>旁路</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefBypass">
+   <property name="geometry">
+    <rect>
+     <x>701</x>
+     <y>306</y>
+     <width>216</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>否</string>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditDefenseLocation">
+   <property name="geometry">
+    <rect>
+     <x>273</x>
+     <y>399</y>
+     <width>644</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;
+font: 26px</string>
+   </property>
+   <property name="text">
+    <string>大厅</string>
+   </property>
+   <property name="maxLength">
+    <number>30</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonAddDefDelayAlarm">
+   <property name="geometry">
+    <rect>
+     <x>273</x>
+     <y>492</y>
+     <width>214</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 27px;</string>
+   </property>
+   <property name="text">
+    <string>是</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>mylineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonAddDefCalibrate</tabstop>
+  <tabstop>pushButtonAddDefReset</tabstop>
+  <tabstop>pushButtonAddDefPrev</tabstop>
+  <tabstop>pushButtonAddDefNext</tabstop>
+  <tabstop>pushButtonAddDefDel</tabstop>
+  <tabstop>pushButtonAddDefSave</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

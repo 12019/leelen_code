@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SysSetEngineerDialog</class>
+ <widget class="QDialog" name="SysSetEngineerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>18</y>
+     <width>535</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerRemoteCheck">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>140</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>远程设置</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerSave">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>335</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerReturn">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>400</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerNetAddress">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>10</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>网络</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerDoorMachine">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>75</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>门口机</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerPwd">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>205</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>密码</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerIpCamera">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>140</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>IP摄像机</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonSysSetEngineerOther">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>270</y>
+     <width>157</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>其它</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

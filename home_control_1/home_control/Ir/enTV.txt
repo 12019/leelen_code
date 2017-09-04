@@ -1,0 +1,1 @@
+poweron poweroff vol_up vol_down channel_up channel_down av tv

@@ -1,0 +1,499 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <linux/input.h>
+#include <string.h>
+#include <termios.h>
+#include <sys/select.h>
+#include <sys/time.h>
+#include <pthread.h> 
+#include "softsim_include.h" 
+
+#undef 	SOFTSIM_MD_ID
+#undef 	SOFTSIM_TRACE_HEADER
+#define SOFTSIM_MD_ID					SOFTSIM_MD_TEST
+#define SOFTSIM_TRACE_HEADER			"[TEST]" 
+
+//#define SOFTSIM_IO_PIN		"/dev/ttyMSM1"
+#define SOFTSIM_IO_PIN		"/dev/ttyHSL1"
+
+#define SOFTSIM_UART_BAUDRATE	(115200)
+
+#define SOFTSIM_PIN	"/sys/devices/platform/ecard_power_control.0/state"
+#define SOFTSIM_RST_GPIO	"/sys/class/gpio/gpio1016/value"
+#define SOFTSIM_RST_GPIO_EXPORT	"/sys/class/gpio/export"
+
+static int softsim_gpio_export(char*path, int pin)
+{
+	int gpio_fd = -1;
+	char buffer[64] = {0};
+	int len = 0;
+
+	
+	if(NULL == path)
+	{
+		SOFTSIM_DEBUG("Invalid path!\r\n");
+		return -1;
+	}
+	
+	gpio_fd = open(path, O_WRONLY);
+	
+	if(gpio_fd <= 0)
+	{
+		printf("Open gpio fail!\r\n");
+		return -1;
+	}
+	
+	len = snprintf(buffer, sizeof(buffer), "%d", pin);
+	
+	if(write(gpio_fd, buffer, len) < 0) 
+	{
+		SOFTSIM_DEBUG("Failed to export gpio!\r\n");
+		return -1;
+	}
+		
+	close(gpio_fd);
+	return 0;
+}
+
+static int softsim_export(char*path, int pin)
+{
+	char *file_p;
+	char buffer[64] = {0};
+	int len = 0;
+
+	if(NULL == path)
+	{
+		SOFTSIM_DEBUG("Invalid path!\r\n");
+		return -1;
+	}
+	
+	file_p = fopen(path, "w");
+	
+	if(NULL == file_p)
+	{
+		SOFTSIM_DEBUG("Open gpio fail!\r\n");
+		return -1;
+	}
+	
+	len = snprintf(buffer, sizeof(buffer), "%d", pin);
+	
+	if(fwrite(buffer, sizeof(buffer), len, file_p) < 0) 
+	{
+		SOFTSIM_DEBUG("Failed to export gpio!\r\n");
+		return -1;
+	}
+		
+	fclose(file_p);
+	return 0;
+}
+
+static int softsim_write_pin(char*path, int pin)
+{
+	char*fd = NULL;
+	char buffer[64] = {0};
+	int len = 0;
+
+	
+	if(NULL == path)
+	{
+		SOFTSIM_DEBUG("Invalid path!\r\n");
+		return -1;
+	}
+	
+	fd = fopen(path, "wr");
+	
+	if(NULL == fd)
+	{
+		SOFTSIM_DEBUG("Open pin fail!\r\n");
+		return -1;
+	}
+	
+	len = snprintf(buffer, sizeof(buffer), "%d", pin);
+	
+	if(fwrite(buffer, sizeof(buffer), len, fd) < 0) 
+	{
+		SOFTSIM_DEBUG("Failed to write pin!\r\n");
+		return -1;
+	}
+		
+	fclose(fd);
+	return 0;
+}
+
+static int softsim_read_value(char*path, int*value)
+{
+	char*fd = NULL;
+	char buffer[64] = {0};
+	int len = 0;
+
+	
+	if(NULL == path)
+	{
+		SOFTSIM_DEBUG("Invalid path!\r\n");
+		return -1;
+	}
+	
+	fd = fopen(path, "wr");
+	
+	if(NULL == fd)
+	{
+		SOFTSIM_DEBUG("Open pin fail!\r\n");
+		return -1;
+	}
+	
+	if((len = fread(buffer, 4, 4, fd)) < 0) 
+	{
+		SOFTSIM_DEBUG("Failed to read pin!\r\n");
+		return -1;
+	}
+	
+	SOFTSIM_DEBUG("len = %d\r\n",len);
+	SOFTSIM_DEBUG("%d, %d, %d, %d\r\n",buffer[0], buffer[1], buffer[2], buffer[3]);
+	
+	byte_8_32(*value, buffer[0], buffer[1], buffer[2], buffer[3]);
+		
+	fclose(fd);
+	return 0;
+}
+
+s32 softsim_send(s32 fd, u8*data, u32 data_len)
+{
+	s32 write_len = 0;
+	write_len = write(fd, data, data_len);
+
+	if(write_len < 0)
+	{
+		SOFTSIM_DEBUG("UART write fail!\r\n");
+	}
+	else
+	{
+		SOFTSIM_PRINT_HEX("tx:", data, write_len);
+	}
+
+	return write_len;
+}
+
+//3B9E11801FC78031E073FE211B66D0FE97D173004CA0A4000002
+//static u8 ATR[] = {0x3B, 0x9E, 0x11, 0x80, 0x1F, 0xC7, 0x80, 0x31, 0xE0, 0x73, 0xFE, 0x21, 0x1B, 0x66, 0xD0, 0xFE, 0x97, 0xD1, 0x73, 0x00, 0x4C};
+static u8 ATR[] = {0x3B, 0x97, 0x95, 0x80, 0x1F, 0x07, 0x80, 0x31, 0xA0, 0x73, 0xBE, 0x21, 0x00, 0x67};
+
+#define ATR_STR	"123456789"
+bool ATR_OK = false;
+s32 atr_check_timer = -1;
+static int uart_fd = -1;
+char *uart_id = NULL;
+u16 count = 0;
+u16 times = 0;
+
+void softsim_atr_check_timeout(void)
+{
+	u8 buffer[50] = {0x00};
+	if(ATR_OK)
+	{
+		SOFTSIM_DEBUG_MARK;
+		SOFTSIM_TIMER_STOP(atr_check_timer);
+	}
+	else
+	{	
+		count++;
+		softsim_memset(buffer, 0x00, sizeof(buffer));
+		softsim_memcpy(buffer, ATR, sizeof(ATR));
+		if((count > 1) && (count > times))
+		{
+			buffer[0] = 0x3B + times;
+		}
+		softsim_send(uart_fd, buffer, sizeof(ATR));
+		times = count;
+		//softsim_send(uart_fd, ATR_STR, softsim_strlen(ATR_STR));
+		//usleep(100*1000);
+	}
+}
+
+void softsim_atr_check(void)
+{
+	SOFTSIM_TIMER_STOP(atr_check_timer);
+	atr_check_timer = softsim_timer_create(softsim_atr_check_timeout, 300); 
+	
+	SOFTSIM_DEBUG("atr_check_timer = %lld",atr_check_timer);
+}
+
+void *softsim_demo_thread(void *arg)
+{
+	int sim_pin_fd = -1;
+	int rst_fd = -1;
+	int gpio_fd = -1;
+	int value = 0;
+	bool ret = 0;
+	u8 status;
+	u8 rx[512] = {0x00};
+	u8 count = 0;
+	u16 len = 0;
+	bool flag = false;
+	//static u8 ATR[] = {0x3B, 0x97, 0x95, 0x80, 0x1F, 0x07, 0x80, 0x31, 0xA0, 0x73, 0xBE, 0x21, 0x00, 0x67};
+	struct timeval timeout;
+
+	fd_set readfds, rfd;	
+
+	SOFTSIM_DEBUG("Hello, softsim!");
+	
+	if(softsim_export(SOFTSIM_RST_GPIO_EXPORT, 1016) < 0)
+	{
+		SOFTSIM_DEBUG("Export gpio fail");
+		return NULL;
+	}
+	
+	SOFTSIM_DEBUG("Export gpio success!");
+	
+	rst_fd = open(SOFTSIM_RST_GPIO, O_RDWR | O_NOCTTY | O_NONBLOCK | O_SYNC);
+	
+	if(rst_fd <= 0)
+	{
+		SOFTSIM_DEBUG("Open Reset pin error");
+		return NULL;
+	}
+	
+	if(softsim_write_pin(SOFTSIM_PIN, 10)<0)
+	{
+		SOFTSIM_DEBUG("write pin fail");
+	}
+	
+	usleep(100*1000);
+	
+	/*if(softsim_write_pin(SOFTSIM_PIN, 13)<0)
+	{
+		SOFTSIM_DEBUG("write pin fail");
+	}
+	
+	usleep(1000*1000);*/
+	
+	if(softsim_write_pin(SOFTSIM_PIN, 9)<0)
+	{
+		SOFTSIM_DEBUG("write pin fail");
+	}
+	
+	usleep(100*1000);
+
+	uart_fd = open(SOFTSIM_IO_PIN, O_RDWR | O_NOCTTY | O_NONBLOCK);
+	
+	if(uart_fd <= 0)
+	{
+		SOFTSIM_DEBUG("Open IO error");
+		return NULL;
+	}
+	
+	SOFTSIM_DEBUG("Open IO success!");
+	
+	softsim_baudrate_set(uart_fd, SOFTSIM_UART_BAUDRATE);
+	
+	timeout.tv_sec = 0; 
+  	timeout.tv_usec=100*1000; //100ms
+ 	FD_ZERO(&readfds);
+  	FD_SET(uart_fd, &readfds);
+	
+	while(1)
+	{
+		rfd = readfds;
+        ret = select(uart_fd+1, &rfd, NULL, NULL, &timeout);
+
+        if(ret < 0)
+        {
+            SOFTSIM_DEBUG("select error!");
+            return NULL;
+        }
+				
+        if (ret > 0)
+        {
+        	len = 0;
+			memset(rx, 0x00, 512);
+            len = read(uart_fd, rx, sizeof(rx));
+            
+            if((1 == len)&&(0x00 == rx[0])&&(!flag))
+            {
+            	SOFTSIM_PRINT_HEX("rx:", rx, len);
+            	//softsim_send(uart_fd, ATR, sizeof(ATR));
+            	softsim_send(uart_fd, ATR_STR, softsim_strlen(ATR_STR));
+            	usleep(100*1000);
+            	flag = true;
+				softsim_atr_check();
+            }
+            else if(len > 0)
+            {
+            	SOFTSIM_PRINT_HEX("rx:", rx, len);
+            }
+            else if((0 == len))
+            {
+            	//softsim_send(uart_fd, ATR, sizeof(ATR));
+            	softsim_send(uart_fd, ATR_STR, softsim_strlen(ATR_STR));
+				usleep(100*1000);
+            }
+        }
+		
+	}
+	
+	return NULL;
+
+}
+s32 demo_main(void);
+
+s32 softsim_demo_thread_entry(void)
+{
+#if 0
+    s32 ret = 0;
+	pthread_t id;
+
+	ret = pthread_create(&id, NULL, (void*)softsim_demo_thread, NULL);
+	
+	if(ret !=  0)  
+	{  
+	     SOFTSIM_DEBUG("can't create thread: %s\n",strerror(ret));  
+	}
+	else
+	{
+		pthread_detach(id);
+	}
+	
+	return ret;
+#else
+	return demo_main();
+#endif
+}
+
+s32 demo_main(void)
+{
+		int sim_pin_fd = -1;
+		int rst_fd = -1;
+		int gpio_fd = -1;
+		int value = 0;
+		bool ret = 0;
+		u8 status;
+		u8 rx[512] = {0x00};
+		u8 count = 0;
+		u16 len = 0;
+		bool flag = false;
+		struct timeval timeout;
+	
+		fd_set readfds, rfd;	
+	
+		SOFTSIM_DEBUG("Hello, softsim!");
+		
+		if(softsim_export(SOFTSIM_RST_GPIO_EXPORT, 1016) < 0)
+		{
+			SOFTSIM_DEBUG("Export gpio fail");
+			return -1;
+		}
+		
+		SOFTSIM_DEBUG("Export gpio success!");
+		
+		rst_fd = open(SOFTSIM_RST_GPIO, O_RDWR | O_NOCTTY | O_NONBLOCK | O_SYNC);
+		
+		if(rst_fd <= 0)
+		{
+			SOFTSIM_DEBUG("Open Reset pin error");
+			return -1;
+		}
+		
+		if(softsim_write_pin(SOFTSIM_PIN, 10)<0)
+		{
+			SOFTSIM_DEBUG("write pin fail");
+		}
+		
+		//usleep(100*1000);
+		
+		if(softsim_write_pin(SOFTSIM_PIN, 13)<0)
+		{
+			SOFTSIM_DEBUG("write pin fail");
+		}
+		
+		//usleep(100*1000);
+	
+		
+		if(softsim_write_pin(SOFTSIM_PIN, 9)<0)
+		{
+			SOFTSIM_DEBUG("write pin fail");
+		}
+		
+		//usleep(100*1000);
+	
+		uart_fd = open(SOFTSIM_IO_PIN, O_RDWR | O_NOCTTY);
+		
+		if(uart_fd <= 0)
+		{
+			SOFTSIM_DEBUG("Open IO error");
+			return -1;
+		}
+		
+		SOFTSIM_DEBUG("Open IO success!");
+
+		//fcntl(uart_fd,F_SETFL,0);
+		
+		softsim_baudrate_set(uart_fd, SOFTSIM_UART_BAUDRATE);
+		
+		timeout.tv_sec = 0; 
+		timeout.tv_usec=130*1000; //100ms
+		FD_ZERO(&readfds);
+		FD_SET(uart_fd, &readfds);
+		//softsim_atr_check();
+		while(1)
+		{
+			rfd = readfds;
+			ret = select(uart_fd+1, &rfd, NULL, NULL, &timeout);
+	
+			if(ret < 0)
+			{
+				SOFTSIM_DEBUG("select error!");
+				return -1;
+			}
+					
+			if (ret > 0)
+			{
+				len = 0;
+				memset(rx, 0, sizeof(rx));
+				
+				SOFTSIM_DEBUG_MARK;
+				len = read(uart_fd, rx, sizeof(rx));
+				
+				SOFTSIM_DEBUG_MARK;
+				
+				if((1 == len)&&(0x00 == rx[0]))
+				{
+					SOFTSIM_PRINT_HEX("rx0:", rx, len);
+					
+					usleep(46*1000);
+					softsim_send(uart_fd, ATR, sizeof(ATR));
+					usleep(30*1000);
+					memset(rx, 0, sizeof(rx));
+					len = read(uart_fd, rx, sizeof(rx));
+					SOFTSIM_PRINT_HEX("rx1:", rx, len);
+
+					if(len >= 14)
+					{
+						usleep(4900*1000);
+					}
+					/*usleep(20*1000);
+					memset(rx, 0, sizeof(rx));
+					len = read(uart_fd, rx, sizeof(rx));
+					SOFTSIM_PRINT_HEX("rx2:", rx, len);*/
+					//softsim_send(uart_fd, ATR_STR, softsim_strlen(ATR_STR));
+					//usleep(100*1000);
+					flag = true;
+					//softsim_atr_check();
+				}
+				else if(len > 0)
+				{
+					SOFTSIM_PRINT_HEX("rx:", rx, len);
+				}
+				else if((0 == len))
+				{
+					SOFTSIM_DEBUG_MARK;
+					softsim_send(uart_fd, ATR, sizeof(ATR));
+					//softsim_send(uart_fd, ATR_STR, softsim_strlen(ATR_STR));
+					usleep(100*1000);
+				}
+			}
+			
+		}
+		
+		return 0;
+}
+
+

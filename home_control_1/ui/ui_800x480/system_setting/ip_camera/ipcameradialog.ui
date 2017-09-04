@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IpCameraDialog</class>
+ <widget class="QDialog" name="IpCameraDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="frameIpCameraSetting">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>538</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="MyLineEdit" name="lineEditName8">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>402</y>
+      <width>144</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>name8</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditName7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>357</y>
+      <width>144</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>name7</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditUserName7">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>357</y>
+      <width>97</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>name7</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditUserName8">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>402</y>
+      <width>97</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>name8</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditPwd7">
+    <property name="geometry">
+     <rect>
+      <x>241</x>
+      <y>357</y>
+      <width>97</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>passwd7</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditPwd8">
+    <property name="geometry">
+     <rect>
+      <x>241</x>
+      <y>402</y>
+      <width>97</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>passwd8</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditUrl7">
+    <property name="geometry">
+     <rect>
+      <x>338</x>
+      <y>357</y>
+      <width>200</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>url7</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyLineEdit" name="lineEditUrl8">
+    <property name="geometry">
+     <rect>
+      <x>338</x>
+      <y>402</y>
+      <width>200</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>url8</string>
+    </property>
+    <property name="maxLength">
+     <number>49</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>lineEditName6</zorder>
+   <zorder>lineEditName8</zorder>
+   <zorder>lineEditName7</zorder>
+   <zorder>lineEditUserName6</zorder>
+   <zorder>lineEditUserName7</zorder>
+   <zorder>lineEditUserName8</zorder>
+   <zorder>lineEditPwd7</zorder>
+   <zorder>lineEditPwd8</zorder>
+   <zorder>lineEditUrl7</zorder>
+   <zorder>lineEditUrl8</zorder>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUrl5">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>267</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>url5</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_IpCamera_2">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>50</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>用户名</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUrl2">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>132</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>url2</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUserName3">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>177</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name3</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUrl3">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>177</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>url3</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUrl6">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>312</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>url6</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_IpCamera_4">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>50</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>URL</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUserName4">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>222</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name4</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUserName1">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>87</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name1</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUserName5">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>267</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name5</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUserName2">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>132</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name2</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUrl4">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>222</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>url4</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>511</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>IP摄像机</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUrl1">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>87</y>
+     <width>200</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>url1</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditUserName6">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>312</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name6</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_IpCamera_1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>名称</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_IpCamera_3">
+   <property name="geometry">
+    <rect>
+     <x>241</x>
+     <y>50</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>密码</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditPwd2">
+   <property name="geometry">
+    <rect>
+     <x>241</x>
+     <y>132</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>passwd2</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditPwd1">
+   <property name="geometry">
+    <rect>
+     <x>241</x>
+     <y>87</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>passwd1</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditPwd4">
+   <property name="geometry">
+    <rect>
+     <x>241</x>
+     <y>222</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>passwd4</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditPwd5">
+   <property name="geometry">
+    <rect>
+     <x>241</x>
+     <y>267</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>passwd5</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditPwd6">
+   <property name="geometry">
+    <rect>
+     <x>241</x>
+     <y>312</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>passwd6</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditName1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>87</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name1</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditName2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>132</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name2</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditName3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>177</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name3</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditName4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>222</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name4</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditName5">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>267</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name5</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditName6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>312</y>
+     <width>144</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>name6</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="MyLineEdit" name="lineEditPwd3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>180</y>
+     <width>97</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+background-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>passwd3</string>
+   </property>
+   <property name="maxLength">
+    <number>49</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>mylineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

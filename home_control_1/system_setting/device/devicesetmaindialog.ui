@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceSetMainDialog</class>
+ <widget class="QDialog" name="DeviceSetMainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButtonSystemReset">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>240</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+重置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonLamp">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+电灯</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonFreezer">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>130</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+冰箱</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonCurtain">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>130</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+窗帘</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonTV">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>130</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+电视</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonDefense">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>240</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+防区</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonDVD">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>240</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+DVD</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonCalibration">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>240</y>
+     <width>80</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+
+触摸屏</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>501</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>pushButtonSystemReset</zorder>
+  <zorder>pushButtonLamp</zorder>
+  <zorder>pushButtonFreezer</zorder>
+  <zorder>pushButtonCurtain</zorder>
+  <zorder>pushButtonTV</zorder>
+  <zorder>pushButtonDefense</zorder>
+  <zorder>pushButtonDVD</zorder>
+  <zorder>pushButtonCalibration</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>pushButtonLamp</tabstop>
+  <tabstop>pushButtonFreezer</tabstop>
+  <tabstop>pushButtonCurtain</tabstop>
+  <tabstop>pushButtonTV</tabstop>
+  <tabstop>pushButtonDVD</tabstop>
+  <tabstop>pushButtonCalibration</tabstop>
+  <tabstop>pushButtonDefense</tabstop>
+  <tabstop>pushButtonSystemReset</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

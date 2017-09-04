@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IctDialog</class>
+ <widget class="QDialog" name="IctDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="CommonPushButton" name="pushButtonIctBack">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>32</y>
+     <width>104</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>退格</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctHangUp">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>112</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>挂断</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctDial">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>112</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>呼叫</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctReturn">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>392</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctVideoOpen">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>252</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>视频开</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctRecord">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>322</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>留言</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctVideoClose">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>252</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>视频关</string>
+   </property>
+  </widget>
+  <widget class="ScrollLineEdit" name="lineEditInfo">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>34</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum2">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>117</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum5">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>205</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum6">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>205</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum8">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>293</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum7">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>293</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDisplay">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>40</y>
+     <width>351</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum4">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>205</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctDot">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>381</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>*</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum9">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>293</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctShop">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>381</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>#</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum1">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>117</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>22</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum3">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>117</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctNum0">
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>381</y>
+     <width>173</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1677215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>37</x>
+     <y>27</y>
+     <width>728</width>
+     <height>74</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 15px;
+background-color: rgba(255, 255, 255, 128);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonIctAddressBook">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>182</y>
+     <width>157</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>通信录</string>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>pushButtonIctBack</zorder>
+  <zorder>pushButtonIctHangUp</zorder>
+  <zorder>pushButtonIctDial</zorder>
+  <zorder>pushButtonIctReturn</zorder>
+  <zorder>pushButtonIctVideoOpen</zorder>
+  <zorder>pushButtonIctRecord</zorder>
+  <zorder>pushButtonIctVideoClose</zorder>
+  <zorder>lineEditInfo</zorder>
+  <zorder>pushButtonIctNum2</zorder>
+  <zorder>pushButtonIctNum5</zorder>
+  <zorder>pushButtonIctNum6</zorder>
+  <zorder>pushButtonIctNum8</zorder>
+  <zorder>pushButtonIctNum7</zorder>
+  <zorder>lineEditDisplay</zorder>
+  <zorder>pushButtonIctNum4</zorder>
+  <zorder>pushButtonIctDot</zorder>
+  <zorder>pushButtonIctNum9</zorder>
+  <zorder>pushButtonIctShop</zorder>
+  <zorder>pushButtonIctNum1</zorder>
+  <zorder>pushButtonIctNum3</zorder>
+  <zorder>pushButtonIctNum0</zorder>
+  <zorder>pushButtonIctAddressBook</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ScrollLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>scrolllineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonIctNum1</tabstop>
+  <tabstop>pushButtonIctNum2</tabstop>
+  <tabstop>pushButtonIctNum3</tabstop>
+  <tabstop>pushButtonIctNum4</tabstop>
+  <tabstop>pushButtonIctNum5</tabstop>
+  <tabstop>pushButtonIctNum6</tabstop>
+  <tabstop>pushButtonIctNum7</tabstop>
+  <tabstop>pushButtonIctNum8</tabstop>
+  <tabstop>pushButtonIctNum9</tabstop>
+  <tabstop>pushButtonIctDot</tabstop>
+  <tabstop>pushButtonIctNum0</tabstop>
+  <tabstop>pushButtonIctShop</tabstop>
+  <tabstop>pushButtonIctBack</tabstop>
+  <tabstop>pushButtonIctHangUp</tabstop>
+  <tabstop>pushButtonIctDial</tabstop>
+  <tabstop>pushButtonIctAddressBook</tabstop>
+  <tabstop>pushButtonIctVideoOpen</tabstop>
+  <tabstop>pushButtonIctVideoClose</tabstop>
+  <tabstop>pushButtonIctRecord</tabstop>
+  <tabstop>pushButtonIctReturn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

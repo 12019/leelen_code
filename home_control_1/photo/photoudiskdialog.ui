@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PhotoUDiskDialog</class>
+ <widget class="QDialog" name="PhotoUDiskDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="framePanel">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>18</y>
+     <width>535</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableViewPhotoList">
+   <property name="geometry">
+    <rect>
+     <x>44</x>
+     <y>77</y>
+     <width>518</width>
+     <height>377</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="autoScroll">
+    <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::NoPen</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>20</y>
+     <width>510</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>,white</family>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>U盘的目录和图片</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonPhotoUDiskReturn">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>400</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonPhotoUDiskNext">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>208</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>下一页</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonPhotoUDiskPrev">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>144</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>上一页</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonPhotoUDiskCheck">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>272</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>查看</string>
+   </property>
+  </widget>
+  <widget class="CommonPushButton" name="pushButtonPhotoUDiskImport">
+   <property name="geometry">
+    <rect>
+     <x>597</x>
+     <y>336</y>
+     <width>180</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>AlArabiya</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>导入</string>
+   </property>
+  </widget>
+  <zorder>pushButtonPhotoUDiskCheck</zorder>
+  <zorder>framePanel</zorder>
+  <zorder>tableViewPhotoList</zorder>
+  <zorder>label_title</zorder>
+  <zorder>pushButtonPhotoUDiskReturn</zorder>
+  <zorder>pushButtonPhotoUDiskNext</zorder>
+  <zorder>pushButtonPhotoUDiskPrev</zorder>
+  <zorder>pushButtonPhotoUDiskImport</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CommonPushButton</class>
+   <extends>QPushButton</extends>
+   <header>commonpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonPhotoUDiskPrev</tabstop>
+  <tabstop>pushButtonPhotoUDiskNext</tabstop>
+  <tabstop>pushButtonPhotoUDiskCheck</tabstop>
+  <tabstop>pushButtonPhotoUDiskImport</tabstop>
+  <tabstop>pushButtonPhotoUDiskReturn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
